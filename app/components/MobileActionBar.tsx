@@ -1,0 +1,3 @@
+"use client";
+import { useEffect, useState } from "react"; import Link from "next/link"; import { business } from "../data/site"; import AnalyticsLink from "./AnalyticsLink";
+export default function MobileActionBar(){ const [hide,setHide]=useState(false); useEffect(()=>{const f=()=>setHide(location.pathname.includes('thank-you')||!!document.querySelector('.form-success')); f(); window.addEventListener('popstate',f); return()=>window.removeEventListener('popstate',f);},[]); if(hide)return null; return <div className="mobile-call-bar"><AnalyticsLink href={business.phoneHref} eventName="phone_click">Call</AnalyticsLink><Link href="/#estimate">Request Estimate</Link></div>}
