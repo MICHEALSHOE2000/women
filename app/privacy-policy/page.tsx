@@ -1,0 +1,3 @@
+import { business } from "../data/site";
+export const metadata={title:"Privacy Policy",description:"Privacy policy for The Greatest Concrete Solutions estimate request form."};
+export default function Privacy(){return <main id="main" className="section-shell legal"><h1>Privacy Policy</h1><p>This website collects information that visitors choose to submit through the estimate request form, including contact details and project information.</p><p>{business.name} uses submitted information to respond to concrete project inquiries. Do not submit sensitive personal information through the form.</p><p>Phone and SMS links may open your device calling or messaging application. Standard carrier charges may apply.</p></main>}

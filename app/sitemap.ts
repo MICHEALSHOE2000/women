@@ -1,0 +1,1 @@
+import { business, siteUrl } from "./data/site"; export default function sitemap(){return [{url:siteUrl,lastModified:new Date()},{url:`${siteUrl}/privacy-policy`,lastModified:new Date()},{url:`${siteUrl}/thank-you`,lastModified:new Date()},...business.services.map(s=>({url:`${siteUrl}/services/${s.slug}`,lastModified:new Date()}))];}
